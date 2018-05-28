@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/demo"/>
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:id="@+id/tv_des"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_image"
+        android:text="赖斯美容 固定收.."
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black_1"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:ellipsize="end"/>
+    <View
+        android:layout_width="10dp"
+        android:layout_height="110dp"
+        android:layout_toRightOf="@+id/tv_des"/>
+</RelativeLayout>

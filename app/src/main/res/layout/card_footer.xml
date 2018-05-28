@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_add"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card_footer_bg"/>
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="35dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/card_add"/>
+
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加银行卡"
+        android:textSize="12sp"
+        android:textColor="@color/text_red"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        />
+
+</RelativeLayout>

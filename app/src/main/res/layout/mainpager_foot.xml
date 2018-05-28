@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/space1"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/space" />
+
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:id="@+id/tv_project_title"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="融资中项目"
+        android:textSize="14sp"
+        android:layout_below="@+id/space1"
+        android:textColor="@color/banner_text_grey"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"/>
+
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:id="@+id/tv_moree"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="融资中项目"
+        android:textSize="14sp"
+        android:layout_below="@+id/space1"
+        android:textColor="@color/banner_text_grey"
+        android:layout_alignParentRight="true"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical"/>
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"
+        android:layout_marginTop="47dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_below="@+id/line1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/space"
+        android:layout_below="@+id/rv_footer"/>
+</RelativeLayout>

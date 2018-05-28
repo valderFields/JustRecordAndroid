@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/aty_webview_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/webview_title_conatienr"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white">
+
+
+        <com.mango.lib_common.viewBySelf.TextViewFontIcon
+            android:id="@+id/webview_aty_btn_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="5dp"
+            android:text="&#xe605;"
+            android:textColor="@color/blue_qn"
+            android:textSize="20dp"
+            android:visibility="visible"/>
+
+        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            android:id="@+id/webview_aty_fanhui"
+            android:layout_toRightOf="@+id/webview_aty_btn_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/blue_qn"
+            android:textSize="16dp"
+            android:visibility="visible"/>
+
+        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            android:id="@+id/webview_aty_tuichu"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignTop="@+id/webview_aty_fanhui"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginStart="9dp"
+            android:layout_toEndOf="@+id/webview_aty_fanhui"
+            android:layout_toRightOf="@+id/webview_aty_fanhui"
+            android:text="关闭"
+            android:textColor="@color/blue_qn"
+            android:textSize="16dp"
+            android:gravity="center"
+            />
+
+
+        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            android:id="@+id/webview_aty_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/webview_aty_fengge"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:gravity="center"
+            android:maxWidth="120dp"
+            android:singleLine="true"
+            android:textColor="#655f5f"
+            android:textSize="18dp"/>
+
+        <View
+            android:id="@+id/webview_aty_fengge"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#E5E5E5"/>
+
+
+        <com.mango.lib_common.viewBySelf.TextViewFontIcon
+            android:id="@+id/webview_aty_shuaxin_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@+id/webview_aty_fengge"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="&#xe695;"
+            android:textColor="@color/blue_qn"
+            android:textSize="17dp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/webview_title_conatienr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/webview_aty_no_net"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="158dp"
+            android:src="@drawable/wuwangluo"
+            android:visibility="gone">
+        </ImageView>
+
+        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            android:id="@+id/webview_aty_neirong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/webview_aty_no_net"
+            android:layout_centerHorizontal="true"
+            android:text="无网络连接"
+            android:textColor="#b1b1b1"
+            android:textSize="26dp"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/webView_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_below="@+id/webview_title_conatienr"
+        android:id="@+id/x5web_progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:progressDrawable="@drawable/progress_bar_states"
+        android:visibility="gone"/>
+
+</RelativeLayout>

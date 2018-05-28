@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ItemBar">
+        <attr name="left_img" format="color|reference"></attr>
+        <attr name="left_text" format="string|reference"></attr>
+        <attr name="right_text" format="string|reference"></attr>
+        <attr name="left_img_visible">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="right_icon" format="color|reference"></attr>
+        <attr name="right_img" format="color|reference"></attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:id="@+id/tv_man"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="男"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/text_red"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"/>
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:id="@+id/tv_woman"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="女"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/text_red"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/line"/>
+
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="取消"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/banner_text_grey"/>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="50dp">
+    
+    <ImageView
+        android:id="@+id/iv_left_img"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="14dp"
+        android:layout_centerVertical="true"/>
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:id="@+id/tv_left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="56dp"
+        android:text="我投资的项目"
+        android:textSize="15sp"
+        android:textColor="@color/top_bar_text"/>
+
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:id="@+id/tv_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:text=""
+        android:textSize="15sp"
+        android:textColor="@color/top_bar_text" />
+
+    <ImageView
+        android:id="@+id/iv_right_icon"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="32dp"/>
+
+    <ImageView
+        android:id="@+id/iv_right_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/to_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="13dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

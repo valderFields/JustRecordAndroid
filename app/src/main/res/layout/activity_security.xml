@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:itembar="http://schemas.android.com/apk/res-auto"
+    tools:context="com.mango.mobile.paper.modules.setting.SecurityActivity"
+    android:orientation="vertical">
+
+    <com.mango.lib_common.viewBySelf.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mango.lib_common.viewBySelf.ItemBar
+        android:id="@+id/ib_change_ps"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        itembar:left_img_visible="gone"
+        itembar:left_text="修改登录密码"/>
+
+</LinearLayout>

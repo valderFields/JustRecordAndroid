@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mango.mobile.paper.modules.mainPager.ProjectDetailsActivity">
+
+    <com.mango.lib_common.viewBySelf.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+               layout="@layout/item_main"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/space"/>
+            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="项目发起人"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/banner_text_grey"
+                android:background="@android:color/white"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <ImageView
+                    android:id="@+id/iv_person"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/share_moments"/>
+                <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="66dp"
+                    android:layout_centerVertical="true"
+                    android:text="名字"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_black"/>
+                <ImageView
+                    android:id="@+id/iv_phone"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/project_phone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/space"/>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_height="50dp" />
+            <com.mango.lib_common.viewBySelf.CustomViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="116dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+        
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="16dp"
+            android:background="@drawable/interest"/>
+        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/banner_text_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/ll_left"
+        android:text="融资中"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"/>
+</RelativeLayout>

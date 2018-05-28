@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itembar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <com.mango.lib_common.viewBySelf.TopBar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.mango.lib_common.viewBySelf.ItemBar
+            android:id="@+id/iv_head"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            itembar:left_img_visible="gone"
+            itembar:left_text="头像" />
+
+        <com.mango.lib_common.viewBySelf.ItemBar
+            android:id="@+id/iv_nick"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            itembar:left_img_visible="gone"
+            itembar:left_text="用户名" />
+
+        <com.mango.lib_common.viewBySelf.ItemBar
+            android:id="@+id/iv_sex"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            itembar:left_img_visible="gone"
+            itembar:left_text="性别" />
+
+        <com.mango.lib_common.viewBySelf.ItemBar
+            android:id="@+id/iv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            itembar:left_img_visible="gone"
+            itembar:left_text="手机" />
+
+        <com.mango.lib_common.viewBySelf.ItemBar
+            android:id="@+id/iv_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            itembar:left_img_visible="gone"
+            itembar:left_text="邮箱" />
+
+        <!--<com.guangxuan.lib_common.viewBySelf.ItemBar-->
+            <!--android:id="@+id/iv_address"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--itembar:left_img_visible="gone"-->
+            <!--itembar:left_text="收货地址" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:background="@color/space" />
+
+        <com.mango.lib_common.viewBySelf.ItemBar
+            android:id="@+id/iv_card"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            itembar:left_img_visible="gone"
+            itembar:left_text="我的银行卡" />
+        <com.mango.lib_common.viewBySelf.ItemBar
+            android:id="@+id/iv_identity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            itembar:left_img_visible="gone"
+            itembar:left_text="实名认证" />
+        <com.mango.lib_common.viewBySelf.ItemBar
+            android:id="@+id/iv_pay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            itembar:left_img_visible="gone"
+            itembar:left_text="支付密码" />
+
+    </LinearLayout>
+</ScrollView>

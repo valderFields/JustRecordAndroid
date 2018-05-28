@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#fb343e</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorLine">#E1E1E1</color>
+    <color name="colorText">#727272</color>
+
+    <color name="text_black">#333333</color>
+    <color name="line">#dddddd</color>
+    <color name="hint_text">#c9c9c9</color>
+    <color name="text_red">#fb343e</color>
+    <color name="space">#f8f8f8</color>
+    <color name="banner_text_grey">#888888</color>
+    <color name="banner_text_red">#de202c</color>
+    <color name="text_black_1">#2b2b2b</color>
+    <color name="text_black_2">#3c3c3c</color>
+    <color name="gray_1">#f6f6f6</color>
+    <color name="gray_2">#efefef</color>
+    <color name="gray_3">#aaaaaa</color>
+    <color name="black_1">#666666</color>
+    <color name="gray_4">#eaeaea</color>
+    <color name="share_bg">#c1c1c1</color>
+    <color name="time_line">#f2f2f2</color>
+</resources>

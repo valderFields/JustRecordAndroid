@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.mango.mobile.paper.modules.projectPager.SearchActivity">
+
+    <com.mango.lib_common.viewBySelf.SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="常用搜索词"
+        android:textColor="@color/black_1"
+        android:textSize="15sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="15dp"/>
+
+    <co.lujun.androidtagview.TagContainerLayout
+        android:id="@+id/tag_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:tag_theme="none"
+        app:container_enable_drag="false"
+        app:horizontal_interval="10dp"
+        app:container_background_color="@android:color/white"
+        app:tag_background_color="#eaeaea"
+        app:tag_vertical_padding="7dp"
+        app:tag_horizontal_padding="28dp"
+        app:tag_text_color ="@color/black_1"
+        app:tag_border_color="#eaeaea"
+        app:vertical_interval="10dp"
+        app:container_border_color="@android:color/white"/>
+
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="历史搜索"
+            android:textColor="@color/black_1"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp"/>
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="13dp"
+            android:background="@drawable/delete"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"/>
+    </RelativeLayout>
+
+    <co.lujun.androidtagview.TagContainerLayout
+        android:id="@+id/tag_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:tag_theme="none"
+        app:container_enable_drag="false"
+        app:horizontal_interval="10dp"
+        app:container_background_color="@android:color/white"
+        app:tag_background_color="#eaeaea"
+        app:tag_vertical_padding="7dp"
+        app:tag_horizontal_padding="28dp"
+        app:tag_text_color ="@color/black_1"
+        app:tag_border_color="#eaeaea"
+        app:vertical_interval="10dp"
+        app:container_border_color="@android:color/white"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

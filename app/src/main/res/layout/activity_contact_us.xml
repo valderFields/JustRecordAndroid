@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.mango.mobile.paper.modules.setting.ContactUsActivity">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+         <com.mango.lib_common.viewBySelf.TopBar
+             android:id="@+id/topbar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="53dp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="16dp"
+                 android:text="客户服务热线："
+                 android:textColor="@color/text_black"
+                 android:textSize="15sp"/>
+         </LinearLayout>
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_marginLeft="15dp"
+             android:layout_height="0.5dp"
+             android:background="@color/line"/>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="53dp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="16dp"
+                 android:text="服务时间："
+                 android:textColor="@color/text_black"
+                 android:textSize="15sp"/>
+             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="1dp"
+                 android:text="工作日9:00——18:00（法定节假日除外）"
+                 android:textColor="@color/text_black"
+                 android:textSize="15sp"/>
+         </LinearLayout>
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_marginLeft="15dp"
+             android:layout_height="0.5dp"
+             android:layout_marginRight="3dp"
+             android:background="@color/line"/>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="53dp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="16dp"
+                 android:text="官方投诉电话："
+                 android:textColor="@color/text_black"
+                 android:textSize="15sp"/>
+         </LinearLayout>
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_marginLeft="15dp"
+             android:layout_height="0.5dp"
+             android:background="@color/line"/>
+         
+         <com.mango.lib_common.viewBySelf.TextViewCustomTF
+             android:layout_width="match_parent"
+             android:layout_height="44dp"
+             android:text="投客总部"
+             android:textSize="15sp"
+             android:gravity="center_vertical"
+             android:paddingLeft="16dp"
+             android:background="@color/space"
+             android:textColor="@color/text_black"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="53dp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="16dp"
+                 android:text="地址："
+                 android:textColor="@color/text_black"
+                 android:textSize="15sp"/>
+         </LinearLayout>
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_marginLeft="15dp"
+             android:layout_height="0.5dp"
+             android:background="@color/line"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="53dp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="16dp"
+                 android:text="邮编："
+                 android:textColor="@color/text_black"
+                 android:textSize="15sp"/>
+         </LinearLayout>
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_marginLeft="15dp"
+             android:layout_height="0.5dp"
+             android:background="@color/line"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="53dp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="16dp"
+                 android:text="总机    ："
+                 android:textColor="@color/text_black"
+                 android:textSize="15sp"/>
+         </LinearLayout>
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_marginLeft="15dp"
+             android:layout_height="0.5dp"
+             android:background="@color/line"/>
+
+
+     </LinearLayout>
+</ScrollView>

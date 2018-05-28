@@ -12,7 +12,7 @@
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:orientation="vertical">
-         <com.mango.lib_common.viewBySelf.TopBar
+         <com.mango.viewBySelf.TopBar
              android:id="@+id/topbar"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"/>
@@ -21,7 +21,7 @@
              android:layout_height="53dp"
              android:gravity="center_vertical"
              android:orientation="horizontal">
-             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+             <com.mango.viewBySelf.TextViewCustomTF
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="16dp"
@@ -41,14 +41,14 @@
              android:layout_height="53dp"
              android:gravity="center_vertical"
              android:orientation="horizontal">
-             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+             <com.mango.viewBySelf.TextViewCustomTF
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="16dp"
                  android:text="服务时间："
                  android:textColor="@color/text_black"
                  android:textSize="15sp"/>
-             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+             <com.mango.viewBySelf.TextViewCustomTF
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="1dp"
@@ -69,7 +69,7 @@
              android:layout_height="53dp"
              android:gravity="center_vertical"
              android:orientation="horizontal">
-             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+             <com.mango.viewBySelf.TextViewCustomTF
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="16dp"
@@ -84,7 +84,7 @@
              android:layout_height="0.5dp"
              android:background="@color/line"/>
          
-         <com.mango.lib_common.viewBySelf.TextViewCustomTF
+         <com.mango.viewBySelf.TextViewCustomTF
              android:layout_width="match_parent"
              android:layout_height="44dp"
              android:text="投客总部"
@@ -98,7 +98,7 @@
              android:layout_height="53dp"
              android:gravity="center_vertical"
              android:orientation="horizontal">
-             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+             <com.mango.viewBySelf.TextViewCustomTF
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="16dp"
@@ -117,7 +117,7 @@
              android:layout_height="53dp"
              android:gravity="center_vertical"
              android:orientation="horizontal">
-             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+             <com.mango.viewBySelf.TextViewCustomTF
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="16dp"
@@ -136,7 +136,7 @@
              android:layout_height="53dp"
              android:gravity="center_vertical"
              android:orientation="horizontal">
-             <com.mango.lib_common.viewBySelf.TextViewCustomTF
+             <com.mango.viewBySelf.TextViewCustomTF
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="16dp"

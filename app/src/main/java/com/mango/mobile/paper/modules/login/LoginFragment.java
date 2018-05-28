@@ -2,13 +2,13 @@ package com.mango.mobile.paper.modules.login;
 
 import android.view.View;
 
-import com.mango.lib_common.base.BaseApplication;
-import com.mango.lib_common.base.BaseMvpFragment;
-import com.mango.lib_common.utils.Helper;
-import com.mango.lib_common.utils.chacheUtil.CacheElementKey;
-import com.mango.lib_common.utils.chacheUtil.CacheUtility;
-import com.mango.lib_common.viewBySelf.EditTextCustomTF;
-import com.mango.lib_common.viewBySelf.TextViewCustomTF;
+import com.mango.base.BaseApplication;
+import com.mango.base.BaseMvpFragment;
+import com.mango.utils.Helper;
+import com.mango.utils.chacheUtil.CacheElementKey;
+import com.mango.utils.chacheUtil.CacheUtility;
+import com.mango.viewBySelf.EditTextCustomTF;
+import com.mango.viewBySelf.TextViewCustomTF;
 import com.mango.mobile.paper.R;
 
 import butterknife.BindView;

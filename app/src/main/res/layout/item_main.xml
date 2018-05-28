@@ -12,7 +12,7 @@
         android:layout_height="12dp"
         android:background="@color/space" />
     
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_project_title"
         android:layout_width="match_parent"
         android:layout_height="35dp"
@@ -36,7 +36,7 @@
         android:layout_below="@+id/line1"
         android:layout_margin="15dp"
         android:background="@drawable/demo1"/>
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_last_time"
         android:layout_width="match_parent"
         android:layout_height="28dp"
@@ -50,7 +50,7 @@
         android:layout_marginRight="15dp"
         android:background="@drawable/last_time_bg"
         android:visibility="gone"/>
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_project_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"/>
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_income_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
         android:textColor="@android:color/white"
         android:background="@drawable/income_type_bg" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_project_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
         android:textColor="@color/text_black"
         android:textSize="14sp" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="24%"
@@ -95,7 +95,7 @@
         android:layout_marginTop="46dp"
         android:layout_marginLeft="31dp" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="预期年化回报率"
@@ -105,7 +105,7 @@
         android:layout_marginTop="76dp"
         android:layout_marginLeft="31dp" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="12个月"
@@ -115,7 +115,7 @@
         android:layout_marginTop="46dp"
         android:layout_centerHorizontal="true" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="项目期限"
@@ -125,7 +125,7 @@
         android:layout_marginTop="76dp"
         android:layout_centerHorizontal="true" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2016-08-20"
@@ -136,7 +136,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="31dp" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="项目期限"
@@ -162,7 +162,7 @@
         app:rcProgressColor="@color/colorPrimaryDark"
         app:rcBackgroundColor="@color/line" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="已融83%"
@@ -172,7 +172,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="23dp" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="起投1万 | 可投金额 200万元"

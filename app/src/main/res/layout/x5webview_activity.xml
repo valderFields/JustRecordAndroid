@@ -15,7 +15,7 @@
         android:background="@android:color/white">
 
 
-        <com.mango.lib_common.viewBySelf.TextViewFontIcon
+        <com.mango.viewBySelf.TextViewFontIcon
             android:id="@+id/webview_aty_btn_back_icon"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
@@ -27,7 +27,7 @@
             android:textSize="20dp"
             android:visibility="visible"/>
 
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:id="@+id/webview_aty_fanhui"
             android:layout_toRightOf="@+id/webview_aty_btn_back_icon"
             android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
             android:textSize="16dp"
             android:visibility="visible"/>
 
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:id="@+id/webview_aty_tuichu"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
@@ -56,7 +56,7 @@
             />
 
 
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:id="@+id/webview_aty_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
             android:background="#E5E5E5"/>
 
 
-        <com.mango.lib_common.viewBySelf.TextViewFontIcon
+        <com.mango.viewBySelf.TextViewFontIcon
             android:id="@+id/webview_aty_shuaxin_icon"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
@@ -109,7 +109,7 @@
             android:visibility="gone">
         </ImageView>
 
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:id="@+id/webview_aty_neirong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

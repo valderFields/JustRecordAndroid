@@ -2,24 +2,19 @@ package com.mango.mobile.paper.mainui;
 
 
 import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 
-import com.mango.lib_common.db.DbManager;
-import com.mango.lib_common.entity.User;
+import com.mango.db.DbManager;
+import com.mango.entity.User;
 import com.mango.mobile.paper.R;
-import com.mango.lib_common.base.BaseMvpFragment;
+import com.mango.base.BaseMvpFragment;
 import com.mango.mobile.paper.modules.login.LoginActivity;
 import com.mango.mobile.paper.modules.myinfo.MyInfoActivity;
-import com.mango.mobile.paper.modules.setting.SettingActivity;
+import com.mango.utils.Helper;
+import com.mango.utils.RSAUtil;
+
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -36,12 +31,10 @@ public class MyInfoMvpFragment extends BaseMvpFragment {
 //    ImageView ivGlide;
 //    @BindView(R.id.btn_lode)
 //    Button btnLoad;
-    @BindView(R.id.iv_setting)
-    ImageView ivSetting;
-    @BindView(R.id.btn_login)
-    Button btnLogin;
-    @BindView(R.id.fl_info)
-    FrameLayout flInfo;
+
+//    @BindView(R.id.btn_login)
+//    Button btnLogin;
+
 
     @Override
     public int getLayoutResID() {
@@ -50,40 +43,27 @@ public class MyInfoMvpFragment extends BaseMvpFragment {
 
     @Override
     protected void init() {
-        ButterKnife.bind(this, getActivity());
-//        btnLoad.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String url = "https://img.gcall.com/dca5/M00/10/8E/wKhoNlggetaENWylAAAAAAAAAAA457.jpg";
-//                String url1 = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522404789932&di=98a05729a82eb34b3e197c315b13f083&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Ff703738da9773912d40a27abf2198618377ae2c8.jpg";
-//                Helper.showToast("下载");
-//                Glide.with(getActivity())
-//                        .load(url1)
-//                        .into(ivGlide);
-//            }
-        //       });
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), LoginActivity.class));
-            }
-        });
+        try {
+            byte[] s = RSAUtil.encryptByPublicKey("我是加密数据", RSAUtil.PUBLIC_KEY);
+            String str = RSAUtil.bytes2HexString(s);// 16进制字符串
+            Helper.showToast(str);
+        }catch (Exception e){
 
-
-    }
-
-    @OnClick({R.id.iv_setting, R.id.fl_info})
-    void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.iv_setting:
-                startActivity(new Intent(getActivity(), SettingActivity.class));
-                break;
-            case R.id.fl_info:
-                isLogin();
-                break;
         }
+        //ButterKnife.bind(this, getActivity());
+//
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getActivity(), LoginActivity.class));
+//            }
+//        });
+
+
     }
+
+
 
     /**
      * 判断是否已经登录

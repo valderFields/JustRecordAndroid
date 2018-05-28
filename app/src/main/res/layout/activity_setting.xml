@@ -7,50 +7,50 @@
     android:orientation="vertical"
     tools:context="com.mango.mobile.paper.modules.setting.SettingActivity">
 
-    <com.mango.lib_common.viewBySelf.TopBar
+    <com.mango.viewBySelf.TopBar
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_security"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/security_setting"
         itembar:left_text="账户安全" />
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_message"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/message_setting"
         itembar:right_img="@drawable/message_open"
         itembar:left_text="消息推送通知"/>
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_feedback"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/feedback_setting"
         itembar:left_text="意见反馈"/>
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_question"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/question_setting"
         itembar:left_text="常见问题解答"/>
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_about"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/about_setting"
         itembar:left_text="关于中纳联"/>
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_contact"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/contact_setting"
         itembar:left_text="联系我们"/>
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_logout"
         android:layout_width="match_parent"
         android:layout_height="44dp"

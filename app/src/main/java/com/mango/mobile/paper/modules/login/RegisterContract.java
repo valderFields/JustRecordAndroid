@@ -1,8 +1,8 @@
 package com.mango.mobile.paper.modules.login;
 
-import com.mango.lib_common.base.mvp.BaseModel;
-import com.mango.lib_common.base.mvp.BasePresenter;
-import com.mango.lib_common.base.mvp.BaseView;
+import com.mango.base.mvp.BaseModel;
+import com.mango.base.mvp.BasePresenter;
+import com.mango.base.mvp.BaseView;
 
 /**
  * Created by Administrator on 2018/4/27 0027.

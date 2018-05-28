@@ -2,9 +2,8 @@ package com.mango.mobile.paper.mainui;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.LinearLayout;
 
-import com.mango.lib_common.base.BaseMvpFragment;
+import com.mango.base.BaseMvpFragment;
 import com.mango.mobile.paper.R;
 import com.mango.mobile.paper.modules.TimeLinePager.TimeLineContract;
 import com.mango.mobile.paper.modules.TimeLinePager.TimeLineModel;

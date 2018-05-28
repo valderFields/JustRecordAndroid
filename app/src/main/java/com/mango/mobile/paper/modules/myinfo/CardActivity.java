@@ -7,8 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.mango.lib_common.base.BaseActivity;
-import com.mango.lib_common.viewBySelf.TopBar;
+import com.mango.base.BaseActivity;
+import com.mango.viewBySelf.TopBar;
 import com.mango.mobile.paper.R;
 import com.mango.mobile.paper.modules.myinfo.adapter.CardAdapter;
 

@@ -4,10 +4,10 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.mango.lib_common.base.BaseMvpFragment;
-import com.mango.lib_common.utils.Helper;
-import com.mango.lib_common.viewBySelf.EditTextCustomTF;
-import com.mango.lib_common.viewBySelf.TextViewCustomTF;
+import com.mango.base.BaseMvpFragment;
+import com.mango.utils.Helper;
+import com.mango.viewBySelf.EditTextCustomTF;
+import com.mango.viewBySelf.TextViewCustomTF;
 import com.mango.mobile.paper.R;
 
 import butterknife.BindView;

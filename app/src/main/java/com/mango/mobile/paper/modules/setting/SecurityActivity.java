@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.mango.lib_common.base.BaseActivity;
-import com.mango.lib_common.viewBySelf.TopBar;
+import com.mango.base.BaseActivity;
+import com.mango.viewBySelf.TopBar;
 import com.mango.mobile.paper.R;
 
 import butterknife.BindView;

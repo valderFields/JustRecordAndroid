@@ -23,7 +23,7 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/share_wechat" />
 
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="微信"
@@ -46,7 +46,7 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/share_moments" />
 
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="朋友圈"
@@ -69,7 +69,7 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/share_qq" />
 
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="QQ好友"
@@ -92,7 +92,7 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/share_sina" />
 
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="新浪微博"
@@ -115,7 +115,7 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/share_zone" />
 
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="QQ空间"
@@ -131,7 +131,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="15dp"
         android:background="@android:color/white"/>
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

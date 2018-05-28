@@ -15,7 +15,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="15dp"
             android:background="@drawable/to_left"/>
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:id="@+id/tv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
             android:textColor="@android:color/white"/>
     </LinearLayout>
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         android:text="标题"
         android:textSize="18dp"
         android:textColor="@android:color/white"/>
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

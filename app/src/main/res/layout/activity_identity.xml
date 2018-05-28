@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context="com.mango.mobile.paper.modules.myinfo.IdentityActivity">
 
-    <com.mango.lib_common.viewBySelf.TopBar
+    <com.mango.viewBySelf.TopBar
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@android:color/white">
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -24,7 +24,7 @@
             android:textColor="@color/text_black"
             android:textSize="15sp" />
 
-        <com.mango.lib_common.viewBySelf.EditTextCustomTF
+        <com.mango.viewBySelf.EditTextCustomTF
             android:id="@+id/et_person_name"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@android:color/white">
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -54,7 +54,7 @@
             android:textColor="@color/text_black"
             android:textSize="15sp" />
 
-        <com.mango.lib_common.viewBySelf.EditTextCustomTF
+        <com.mango.viewBySelf.EditTextCustomTF
             android:id="@+id/et_person_num"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
             android:background="@color/line" />
     </RelativeLayout>
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_confirm"
         android:layout_width="match_parent"
         android:layout_height="44dp"

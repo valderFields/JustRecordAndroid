@@ -10,9 +10,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.mango.lib_common.viewBySelf.TextViewCustomTF;
+import com.mango.viewBySelf.TextViewCustomTF;
 import com.mango.mobile.paper.R;
-import com.mango.mobile.paper.modules.TimeLinePager.TimeLineContract;
 import com.umeng.message.PushAgent;
 
 import butterknife.BindView;
@@ -63,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
     private TimeLineMvpFragment timeLineMvpFragment; //时光轴
     private MyInfoMvpFragment myInfoMvpFragment;  // //第三个fragment
 
+    private int currentPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,21 +94,30 @@ public class MainActivity extends AppCompatActivity {
     void onClick(View view) {
         switch (view.getId()) {
             case R.id.ll_home:
+                currentPager = 0;
                 showFragment(mainPagerMvpFragment);
                 setBannerColor(0);
                 break;
             case R.id.ll_project:
+                currentPager = 1;
                 showFragment(projectMvpFragment);
                 setBannerColor(1);
                 break;
             case R.id.ll_add:
-                showFragment(timeLineMvpFragment);
-                setBannerColor(2);
+                if (currentPager == 2){
+
+                }else {
+                    showFragment(timeLineMvpFragment);
+                    setBannerColor(2);
+                }
+                currentPager = 2;
                 break;
             case R.id.ll_message:
+                currentPager = 3;
                 setBannerColor(3);
                 break;
             case R.id.ll_info:
+                currentPager = 4;
                 showFragment(myInfoMvpFragment);
                 setBannerColor(4);
                 break;

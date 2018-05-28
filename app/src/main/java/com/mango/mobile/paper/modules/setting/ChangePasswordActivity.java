@@ -5,11 +5,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.mango.lib_common.base.BaseActivity;
-import com.mango.lib_common.utils.Helper;
-import com.mango.lib_common.viewBySelf.EditTextCustomTF;
-import com.mango.lib_common.viewBySelf.TextViewCustomTF;
-import com.mango.lib_common.viewBySelf.TopBar;
+import com.mango.base.BaseActivity;
+import com.mango.utils.Helper;
+import com.mango.viewBySelf.EditTextCustomTF;
+import com.mango.viewBySelf.TextViewCustomTF;
+import com.mango.viewBySelf.TopBar;
 import com.mango.mobile.paper.R;
 
 import butterknife.BindView;

@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.mango.lib_common.base.BaseMvpFragment;
+import com.mango.base.BaseMvpFragment;
 import com.mango.mobile.paper.R;
 import com.mango.mobile.paper.modules.projectPager.ProjectPagerContract;
 import com.mango.mobile.paper.modules.projectPager.ProjectPagerPresenter;

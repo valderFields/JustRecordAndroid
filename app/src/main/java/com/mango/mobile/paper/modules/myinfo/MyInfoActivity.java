@@ -20,15 +20,15 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.zhouwei.library.CustomPopWindow;
-import com.mango.lib_common.base.BaseActivity;
-import com.mango.lib_common.entity.User;
-import com.mango.lib_common.utils.GalleryUtil;
-import com.mango.lib_common.utils.Helper;
-import com.mango.lib_common.utils.ImageUtil;
-import com.mango.lib_common.utils.PermissionUtility;
-import com.mango.lib_common.viewBySelf.ItemBar;
-import com.mango.lib_common.viewBySelf.TextViewCustomTF;
-import com.mango.lib_common.viewBySelf.TopBar;
+import com.mango.base.BaseActivity;
+import com.mango.entity.User;
+import com.mango.utils.GalleryUtil;
+import com.mango.utils.Helper;
+import com.mango.utils.ImageUtil;
+import com.mango.utils.PermissionUtility;
+import com.mango.viewBySelf.ItemBar;
+import com.mango.viewBySelf.TextViewCustomTF;
+import com.mango.viewBySelf.TopBar;
 import com.mango.mobile.paper.BuildConfig;
 import com.mango.mobile.paper.R;
 

@@ -11,40 +11,40 @@
         android:background="@android:color/white"
         android:orientation="vertical">
 
-        <com.mango.lib_common.viewBySelf.TopBar
+        <com.mango.viewBySelf.TopBar
             android:id="@+id/topbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.mango.lib_common.viewBySelf.ItemBar
+        <com.mango.viewBySelf.ItemBar
             android:id="@+id/iv_head"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             itembar:left_img_visible="gone"
             itembar:left_text="头像" />
 
-        <com.mango.lib_common.viewBySelf.ItemBar
+        <com.mango.viewBySelf.ItemBar
             android:id="@+id/iv_nick"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             itembar:left_img_visible="gone"
             itembar:left_text="用户名" />
 
-        <com.mango.lib_common.viewBySelf.ItemBar
+        <com.mango.viewBySelf.ItemBar
             android:id="@+id/iv_sex"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             itembar:left_img_visible="gone"
             itembar:left_text="性别" />
 
-        <com.mango.lib_common.viewBySelf.ItemBar
+        <com.mango.viewBySelf.ItemBar
             android:id="@+id/iv_phone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             itembar:left_img_visible="gone"
             itembar:left_text="手机" />
 
-        <com.mango.lib_common.viewBySelf.ItemBar
+        <com.mango.viewBySelf.ItemBar
             android:id="@+id/iv_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -63,19 +63,19 @@
             android:layout_height="11dp"
             android:background="@color/space" />
 
-        <com.mango.lib_common.viewBySelf.ItemBar
+        <com.mango.viewBySelf.ItemBar
             android:id="@+id/iv_card"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             itembar:left_img_visible="gone"
             itembar:left_text="我的银行卡" />
-        <com.mango.lib_common.viewBySelf.ItemBar
+        <com.mango.viewBySelf.ItemBar
             android:id="@+id/iv_identity"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             itembar:left_img_visible="gone"
             itembar:left_text="实名认证" />
-        <com.mango.lib_common.viewBySelf.ItemBar
+        <com.mango.viewBySelf.ItemBar
             android:id="@+id/iv_pay"
             android:layout_width="match_parent"
             android:layout_height="50dp"

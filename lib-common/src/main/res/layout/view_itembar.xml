@@ -10,7 +10,7 @@
         android:layout_height="28dp"
         android:layout_marginLeft="14dp"
         android:layout_centerVertical="true"/>
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_left_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         android:textSize="15sp"
         android:textColor="@color/top_bar_text"/>
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_right_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

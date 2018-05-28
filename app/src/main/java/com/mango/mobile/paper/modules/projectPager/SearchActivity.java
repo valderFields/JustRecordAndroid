@@ -2,9 +2,9 @@ package com.mango.mobile.paper.modules.projectPager;
 
 import android.os.Bundle;
 
-import com.mango.lib_common.base.BaseActivity;
-import com.mango.lib_common.utils.Helper;
-import com.mango.lib_common.viewBySelf.SearchView;
+import com.mango.base.BaseActivity;
+import com.mango.utils.Helper;
+import com.mango.viewBySelf.SearchView;
 import com.mango.mobile.paper.R;
 
 import java.util.ArrayList;

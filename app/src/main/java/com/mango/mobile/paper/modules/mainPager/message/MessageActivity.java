@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.mango.lib_common.base.BaseActivity;
-import com.mango.lib_common.viewBySelf.TopBar;
+import com.mango.base.BaseActivity;
+import com.mango.viewBySelf.TopBar;
 import com.mango.mobile.paper.R;
 
 import java.util.ArrayList;

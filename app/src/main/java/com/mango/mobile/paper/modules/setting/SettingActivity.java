@@ -7,9 +7,9 @@ import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.mango.lib_common.base.BaseActivity;
-import com.mango.lib_common.viewBySelf.ItemBar;
-import com.mango.lib_common.viewBySelf.TopBar;
+import com.mango.base.BaseActivity;
+import com.mango.viewBySelf.ItemBar;
+import com.mango.viewBySelf.TopBar;
 import com.mango.mobile.paper.R;
 
 import butterknife.BindView;

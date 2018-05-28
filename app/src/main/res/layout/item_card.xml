@@ -29,7 +29,7 @@
             android:id="@+id/iv_icon"
             android:layout_width="50dp"
             android:layout_height="50dp" />
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:id="@+id/tv_card_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:layout_marginLeft="61dp"
             android:layout_marginTop="7dp"/>
 
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:id="@+id/tv_card_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_marginLeft="61dp"
             android:layout_marginTop="29dp"/>
 
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:id="@+id/tv_card_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

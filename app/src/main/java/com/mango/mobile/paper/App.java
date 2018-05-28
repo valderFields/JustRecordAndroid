@@ -8,8 +8,8 @@ import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
-import com.mango.lib_common.base.BaseApplication;
-import com.mango.lib_common.db.DbManager;
+import com.mango.base.BaseApplication;
+import com.mango.db.DbManager;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.MsgConstant;

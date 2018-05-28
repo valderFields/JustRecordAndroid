@@ -9,8 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.mango.lib_common.base.BaseMvpFragment;
-import com.mango.lib_common.utils.GlideImageLoader;
+import com.mango.base.BaseMvpFragment;
+import com.mango.utils.GlideImageLoader;
 import com.mango.mobile.paper.R;
 import com.mango.mobile.paper.modules.mainPager.ProjectDetailsActivity;
 import com.mango.mobile.paper.modules.mainPager.adapter.MainFooterAdapter;

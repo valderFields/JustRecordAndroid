@@ -4,8 +4,8 @@ package com.mango.mobile.paper.modules.login;
 import android.app.Fragment;
 import android.os.Bundle;
 
-import com.mango.lib_common.base.BaseActivity;
-import com.mango.lib_common.viewBySelf.TopBar;
+import com.mango.base.BaseActivity;
+import com.mango.viewBySelf.TopBar;
 import com.mango.mobile.paper.R;
 
 import butterknife.ButterKnife;

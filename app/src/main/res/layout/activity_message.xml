@@ -8,7 +8,7 @@
     android:background="@android:color/white"
     tools:context="com.mango.mobile.paper.modules.mainPager.message.MessageActivity">
 
-    <com.mango.lib_common.viewBySelf.TopBar
+    <com.mango.viewBySelf.TopBar
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

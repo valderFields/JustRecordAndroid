@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 
-import com.mango.lib_common.base.BaseActivity;
-import com.mango.lib_common.viewBySelf.EditTextCustomTF;
-import com.mango.lib_common.viewBySelf.TextViewCustomTF;
-import com.mango.lib_common.viewBySelf.TopBar;
+import com.mango.base.BaseActivity;
+import com.mango.viewBySelf.EditTextCustomTF;
+import com.mango.viewBySelf.TextViewCustomTF;
+import com.mango.viewBySelf.TopBar;
 import com.mango.mobile.paper.R;
 
 import butterknife.BindView;

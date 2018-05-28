@@ -14,10 +14,10 @@ import android.widget.RelativeLayout;
 
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import com.example.zhouwei.library.CustomPopWindow;
-import com.mango.lib_common.base.BaseActivity;
+import com.mango.base.BaseActivity;
 
-import com.mango.lib_common.viewBySelf.TextViewCustomTF;
-import com.mango.lib_common.viewBySelf.TopBar;
+import com.mango.viewBySelf.TextViewCustomTF;
+import com.mango.viewBySelf.TopBar;
 import com.mango.mobile.paper.R;
 import com.mango.mobile.paper.common.utils.ShareUtils;
 import com.mango.mobile.paper.modules.mainPager.adapter.ProjectPagerAdapter;

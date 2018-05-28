@@ -5,9 +5,9 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.view.View;
 
-import com.mango.lib_common.utils.Helper;
-import com.mango.lib_common.utils.ImageUtility;
-import com.mango.lib_common.utils.PermissionUtility;
+import com.mango.utils.Helper;
+import com.mango.utils.ImageUtility;
+import com.mango.utils.PermissionUtility;
 import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;

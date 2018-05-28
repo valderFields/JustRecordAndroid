@@ -1,10 +1,10 @@
 package com.mango.mobile.paper.modules.login;
 
 
-import com.mango.lib_common.entity.User;
-import com.mango.lib_common.retrofitHttp.BaseCallModel;
-import com.mango.lib_common.retrofitHttp.RetrofitHttp;
-import com.mango.lib_common.utils.Helper;
+import com.mango.entity.User;
+import com.mango.retrofitHttp.BaseCallModel;
+import com.mango.retrofitHttp.RetrofitHttp;
+import com.mango.utils.Helper;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;

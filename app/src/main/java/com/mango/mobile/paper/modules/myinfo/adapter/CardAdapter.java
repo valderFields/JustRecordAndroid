@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.mango.lib_common.utils.Helper;
+import com.mango.utils.Helper;
 import com.mango.mobile.paper.R;
 import com.mango.mobile.paper.common.recyclerAdapter.MyBaseQuickAdapter;
 

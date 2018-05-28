@@ -7,12 +7,12 @@
     tools:context="com.mango.mobile.paper.modules.setting.SecurityActivity"
     android:orientation="vertical">
 
-    <com.mango.lib_common.viewBySelf.TopBar
+    <com.mango.viewBySelf.TopBar
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_change_ps"
         android:layout_width="match_parent"
         android:layout_height="50dp"

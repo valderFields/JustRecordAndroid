@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.mango.mobile.paper.mainui.MainActivity">
-    <com.mango.lib_common.viewBySelf.NoScrollerViewPager
+    <com.mango.viewBySelf.NoScrollerViewPager
         android:id="@+id/vp_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,7 +41,7 @@
                 android:layout_width="21dp"
                 android:layout_height="21dp"
                 android:background="@drawable/home_1"/>
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:id="@+id/tv_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
                 android:layout_width="21dp"
                 android:layout_height="21dp"
                 android:background="@drawable/project_2"/>
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:id="@+id/tv_project"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/add_line"/>
-            <!--<com.mango.lib_common.viewBySelf.TextViewCustomTF-->
+            <!--<com.mango.viewBySelfSelf.TextViewCustomTF>-->
                 <!--android:id="@+id/tv_info"-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
@@ -109,7 +109,7 @@
                 android:layout_width="21dp"
                 android:layout_height="21dp"
                 android:background="@drawable/message_2"/>
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:id="@+id/tv_mes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                 android:layout_width="21dp"
                 android:layout_height="21dp"
                 android:background="@drawable/info_2"/>
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:id="@+id/tv_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

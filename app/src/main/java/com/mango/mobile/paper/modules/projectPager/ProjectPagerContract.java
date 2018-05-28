@@ -1,8 +1,8 @@
 package com.mango.mobile.paper.modules.projectPager;
 
-import com.mango.lib_common.base.mvp.BaseModel;
-import com.mango.lib_common.base.mvp.BasePresenter;
-import com.mango.lib_common.base.mvp.BaseView;
+import com.mango.base.mvp.BaseModel;
+import com.mango.base.mvp.BasePresenter;
+import com.mango.base.mvp.BaseView;
 
 /**
  * Created by Administrator on 2018/4/3 0003.

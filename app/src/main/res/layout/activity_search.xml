@@ -8,12 +8,12 @@
     android:background="@android:color/white"
     tools:context="com.mango.mobile.paper.modules.projectPager.SearchActivity">
 
-    <com.mango.lib_common.viewBySelf.SearchView
+    <com.mango.viewBySelf.SearchView
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="常用搜索词"
@@ -48,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="历史搜索"

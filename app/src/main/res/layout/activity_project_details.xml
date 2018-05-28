@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.mango.mobile.paper.modules.mainPager.ProjectDetailsActivity">
 
-    <com.mango.lib_common.viewBySelf.TopBar
+    <com.mango.viewBySelf.TopBar
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
                 android:background="@color/space"/>
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
+            <com.mango.viewBySelf.TextViewCustomTF
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:text="项目发起人"
@@ -47,7 +47,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="15dp"
                     android:background="@drawable/share_moments"/>
-                <com.mango.lib_common.viewBySelf.TextViewCustomTF
+                <com.mango.viewBySelf.TextViewCustomTF
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="66dp"
@@ -74,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_height="50dp" />
-            <com.mango.lib_common.viewBySelf.CustomViewPager
+            <com.mango.viewBySelf.CustomViewPager
                 android:id="@+id/view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -94,7 +94,7 @@
             android:layout_width="18dp"
             android:layout_height="16dp"
             android:background="@drawable/interest"/>
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="关注"
@@ -103,7 +103,7 @@
             android:textSize="12sp" />
     </LinearLayout>
 
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"

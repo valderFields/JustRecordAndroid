@@ -23,9 +23,9 @@ import android.widget.TextView;
 
 import com.mango.mobile.paper.R;
 import com.mango.mobile.paper.common.events.GoBackToFinishEvent;
-import com.mango.lib_common.event.EventCenter;
-import com.mango.lib_common.utils.Helper;
-import com.mango.lib_common.utils.RequestCode;
+import com.mango.event.EventCenter;
+import com.mango.utils.Helper;
+import com.mango.utils.RequestCode;
 import com.orhanobut.logger.Logger;
 import com.tencent.smtt.sdk.CookieManager;
 import com.tencent.smtt.sdk.CookieSyncManager;

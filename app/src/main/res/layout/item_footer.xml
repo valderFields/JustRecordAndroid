@@ -8,7 +8,7 @@
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:background="@drawable/demo"/>
-    <com.mango.lib_common.viewBySelf.TextViewCustomTF
+    <com.mango.viewBySelf.TextViewCustomTF
         android:id="@+id/tv_des"
         android:layout_width="110dp"
         android:layout_height="wrap_content"

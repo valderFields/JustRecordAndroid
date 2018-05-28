@@ -3,7 +3,7 @@ package com.mango.mobile.paper.modules.myinfo;
 
 import android.os.Bundle;
 
-import com.mango.lib_common.base.BaseActivity;
+import com.mango.base.BaseActivity;
 import com.mango.mobile.paper.R;
 
 public class AddCardActivity extends BaseActivity {

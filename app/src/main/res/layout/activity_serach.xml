@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.mango.mobile.paper.modules.searchHistory.SearchActivity">
 
-    <com.mango.lib_common.viewBySelf.SearchView
+    <com.mango.viewBySelf.SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

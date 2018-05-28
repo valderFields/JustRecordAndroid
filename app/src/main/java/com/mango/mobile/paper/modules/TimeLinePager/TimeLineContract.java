@@ -1,8 +1,8 @@
 package com.mango.mobile.paper.modules.TimeLinePager;
 
-import com.mango.lib_common.base.mvp.BaseModel;
-import com.mango.lib_common.base.mvp.BasePresenter;
-import com.mango.lib_common.base.mvp.BaseView;
+import com.mango.base.mvp.BaseModel;
+import com.mango.base.mvp.BasePresenter;
+import com.mango.base.mvp.BaseView;
 import com.mango.mobile.paper.modules.mainPager.MainPagerContract;
 
 /**

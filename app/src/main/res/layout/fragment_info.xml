@@ -30,25 +30,7 @@
         android:layout_height="150dp"
         android:background="@drawable/info_head_bg">
 
-        <FrameLayout
-            android:id="@+id/fl_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="15dp">
-            <ImageView
-                android:layout_width="31dp"
-                android:layout_height="31dp"
-                android:background="@drawable/person"/>
-            <com.mango.lib_common.viewBySelf.TextViewCustomTF
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="40dp"
-                android:text="用户名"
-                android:textColor="@android:color/white"
-                android:textSize="13sp"/>
-        </FrameLayout>
+
 
         <ImageView
             android:id="@+id/iv_setting"
@@ -58,7 +40,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginTop="19dp"
             android:background="@drawable/setting"/>
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="投资总收益"
@@ -66,7 +48,7 @@
             android:textSize="13sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="63dp"/>
-        <com.mango.lib_common.viewBySelf.TextViewCustomTF
+        <com.mango.viewBySelf.TextViewCustomTF
             android:id="@+id/tv_money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -89,54 +71,54 @@
         android:layout_height="10dp"
         android:background="@color/space"/>
 
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_invest"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/invest"
         itembar:left_text="我投资的项目"/>
 
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_reserve"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/reserve"
         itembar:left_text="我预购的项目"/>
 
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_release"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/release"
         itembar:left_text="我发布的项目"/>
 
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_follow"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/follow"
         itembar:left_text="我关注的项目"/>
 
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_discuss"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/discuss"
         itembar:left_text="我约谈的项目"/>
 
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_agreement"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/agreement"
         itembar:left_text="我的合同"/>
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_guide"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         itembar:left_img="@drawable/guide"
         itembar:left_text="新手指引"/>
-    <com.mango.lib_common.viewBySelf.ItemBar
+    <com.mango.viewBySelf.ItemBar
         android:id="@+id/ib_business"
         android:layout_width="match_parent"
         android:layout_height="50dp"

@@ -40,7 +40,7 @@
                 android:id="@+id/iv_home"
                 android:layout_width="21dp"
                 android:layout_height="21dp"
-                android:background="@drawable/home_1"/>
+                android:background="@drawable/home_2"/>
             <com.mango.viewBySelf.TextViewCustomTF
                 android:id="@+id/tv_home"
                 android:layout_width="wrap_content"

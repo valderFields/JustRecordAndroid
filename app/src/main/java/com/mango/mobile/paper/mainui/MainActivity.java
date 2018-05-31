@@ -1,18 +1,25 @@
 package com.mango.mobile.paper.mainui;
 
 import android.app.Fragment;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.mango.mobile.paper.modules.TimeLinePager.AddRecordActivity;
 import com.mango.viewBySelf.TextViewCustomTF;
 import com.mango.mobile.paper.R;
 import com.umeng.message.PushAgent;
+import com.wonderkiln.blurkit.BlurKit;
+
+import java.io.ByteArrayOutputStream;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -62,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
     private TimeLineMvpFragment timeLineMvpFragment; //时光轴
     private MyInfoMvpFragment myInfoMvpFragment;  // //第三个fragment
 
-    private int currentPager;
+    private int currentPager = 2;
+    private byte[] bitmapByte;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +89,24 @@ public class MainActivity extends AppCompatActivity {
         myInfoMvpFragment = new MyInfoMvpFragment();
 
         showFragment(timeLineMvpFragment);
+    }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        cutScreen();
+    }
+
+    private void cutScreen() {
+        View bgView = getWindow().getDecorView();
+        bgView.setDrawingCacheEnabled(true);
+        bgView.buildDrawingCache(true);
+        /**
+         * 获取当前窗口快照，相当于截屏
+         */
+        Bitmap bmp = bgView.getDrawingCache();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bmp.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        bitmapByte = baos.toByteArray();
     }
 
     public void showFragment(Fragment fragment) {
@@ -90,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    @OnClick({R.id.ll_home, R.id.ll_project, R.id.ll_add,R.id.ll_message, R.id.ll_info})
+    @OnClick({R.id.ll_home, R.id.ll_project, R.id.ll_add, R.id.ll_message, R.id.ll_info})
     void onClick(View view) {
         switch (view.getId()) {
             case R.id.ll_home:
@@ -104,9 +129,9 @@ public class MainActivity extends AppCompatActivity {
                 setBannerColor(1);
                 break;
             case R.id.ll_add:
-                if (currentPager == 2){
-
-                }else {
+                if (currentPager == 2) {
+                    addRecord();
+                } else {
                     showFragment(timeLineMvpFragment);
                     setBannerColor(2);
                 }
@@ -127,51 +152,58 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void addRecord() {
+        Intent intent = new Intent(this, AddRecordActivity.class);
+        intent.putExtra("bitmap", bitmapByte);
+        startActivity(intent);
+        Log.d("zhou",System.currentTimeMillis()+"");
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    private void setBannerColor(int num){
-        switch (num){
+    private void setBannerColor(int num) {
+        switch (num) {
             case 0:
                 ivHome.setBackground(getResources().getDrawable(R.drawable.home_1));
                 ivProject.setBackground(getResources().getDrawable(R.drawable.project_2));
-               // ivMessage.setBackground(getResources().getDrawable(R.drawable.message_2));
+                // ivMessage.setBackground(getResources().getDrawable(R.drawable.message_2));
                 ivInfo.setBackground(getResources().getDrawable(R.drawable.info_2));
 
                 tvHome.setTextColor(getResources().getColor(R.color.banner_text_red));
                 tvProject.setTextColor(getResources().getColor(R.color.banner_text_grey));
-               // tvMessage.setTextColor(getResources().getColor(R.color.banner_text_grey));
+                // tvMessage.setTextColor(getResources().getColor(R.color.banner_text_grey));
                 tvInfo.setTextColor(getResources().getColor(R.color.banner_text_grey));
                 break;
             case 1:
                 ivHome.setBackground(getResources().getDrawable(R.drawable.home_2));
                 ivProject.setBackground(getResources().getDrawable(R.drawable.project_1));
-              //  ivMessage.setBackground(getResources().getDrawable(R.drawable.message_2));
+                //  ivMessage.setBackground(getResources().getDrawable(R.drawable.message_2));
                 ivInfo.setBackground(getResources().getDrawable(R.drawable.info_2));
 
                 tvHome.setTextColor(getResources().getColor(R.color.banner_text_grey));
                 tvProject.setTextColor(getResources().getColor(R.color.banner_text_red));
-              //  tvMessage.setTextColor(getResources().getColor(R.color.banner_text_grey));
+                //  tvMessage.setTextColor(getResources().getColor(R.color.banner_text_grey));
                 tvInfo.setTextColor(getResources().getColor(R.color.banner_text_grey));
                 break;
             case 2:
                 ivHome.setBackground(getResources().getDrawable(R.drawable.home_2));
                 ivProject.setBackground(getResources().getDrawable(R.drawable.project_2));
-              //  ivMessage.setBackground(getResources().getDrawable(R.drawable.message_1));
+                //  ivMessage.setBackground(getResources().getDrawable(R.drawable.message_1));
                 ivInfo.setBackground(getResources().getDrawable(R.drawable.info_2));
 
                 tvHome.setTextColor(getResources().getColor(R.color.banner_text_grey));
                 tvProject.setTextColor(getResources().getColor(R.color.banner_text_grey));
-             //   tvMessage.setTextColor(getResources().getColor(R.color.banner_text_red));
+                //   tvMessage.setTextColor(getResources().getColor(R.color.banner_text_red));
                 tvInfo.setTextColor(getResources().getColor(R.color.banner_text_grey));
                 break;
             case 3:
                 ivHome.setBackground(getResources().getDrawable(R.drawable.home_2));
                 ivProject.setBackground(getResources().getDrawable(R.drawable.project_2));
-               // ivMessage.setBackground(getResources().getDrawable(R.drawable.message_2));
+                // ivMessage.setBackground(getResources().getDrawable(R.drawable.message_2));
                 ivInfo.setBackground(getResources().getDrawable(R.drawable.info_1));
 
                 tvHome.setTextColor(getResources().getColor(R.color.banner_text_grey));
                 tvProject.setTextColor(getResources().getColor(R.color.banner_text_grey));
-             //   tvMessage.setTextColor(getResources().getColor(R.color.banner_text_grey));
+                //   tvMessage.setTextColor(getResources().getColor(R.color.banner_text_grey));
                 tvInfo.setTextColor(getResources().getColor(R.color.banner_text_red));
                 break;
             case 4:

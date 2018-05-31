@@ -19,10 +19,34 @@ import javax.crypto.Cipher;
  */
 
 public class RSAUtil {
-
+    public static final String mi = "gvjkfeq";
     public static final String TRANSFORMATION = "RSA/ECB/PKCS1Padding";
     public static final String RSA = "RSA";
-    public static final String PUBLIC_KEY = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFyTMpZoEhwTVq/UDfF3vsorizl9BVyBw8SI06mWkujG8Fm8TAgZ0geBOqbTXfQiP09xchC8dxsVwRTNCV09wiK3glFmSVxOGglpuos2iyVqWfWXk8Q3OxcHCmro2OZYlv2zuLa6t2uu5pfhfzNKUAdw7ME4VRhM5s//pgchR+CwIDAQAB";
+    //public static final String PUBLIC_KEY = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFyTMpZoEhwTVq/UDfF3vsorizl9BVyBw8SI06mWkujG8Fm8TAgZ0geBOqbTXfQiP09xchC8dxsVwRTNCV09wiK3glFmSVxOGglpuos2iyVqWfWXk8Q3OxcHCmro2OZYlv2zuLa6t2uu5pfhfzNKUAdw7ME4VRhM5s//pgchR+CwIDAQAB";
+    //public static final String PUBLIC_KEY = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFyTMpZoEhwTVq/UDfF3vsorizl9BVyBw8SI06mWkujG8Fm8TAgZ0geBOqbTXfQiP09xchC8dxsVwRTNCV09wiK3glFmSVxOGglpuos2iyVqWfWXk8Q3OxcHCmro2OZYlv2zuLa6t2uu5pfhfzNKUAdw7ME4VRhM5s//pgchR+CwIDAQAB";
+    //public static final String PRIVATE_KEY = "MIICXgIBAAKBgQDFyTMpZoEhwTVq/UDfF3vsorizl9BVyBw8SI06mWkujG8Fm8TAgZ0geBOqbTXfQiP09xchC8dxsVwRTNCV09wiK3glFmSVxOGglpuos2iyVqWfWXk8Q3OxcHCmro2OZYlv2zuLa6t2uu5pfhfzNKUAdw7ME4VRhM5s//pgchR+CwIDAQABAoGBAKvl7UhbJXov0Px2tW3vnC4TUtIL7O7RJ/Eg4VX/xVHGjitisYLaY7S3h+gEWOD8PAIIyppXAXWHv0vt5g+B/XxRXlN7MCreuoW4Vrr1T2Pt1a24Zv9vnbx95XJsefPEugJqow0BfX+ZlUsKjl8Xcfr1+vTO6hW29IADSnWSxxjZAkEA7m0Qu8oQhXjrx8wEPYLJKbyhTjEI8t3gFtS10Xq8XFNtVdzzIXrcBdI04prTGOYfBc8mZy1zo2OdiWwh3v4XBwJBANRdSKvv20f4HQ/e8wBFoNhVyrHKItOLRxxuSgi1Y3SpOq0l28D0J0aea7N/D0OTQW0fghrJPbz78hgHz6w0O90CQQCgt7JM89OZNT6yiordL9kMIlQVkiY3GGsi2LXLBFIOZkpQU8Usb1X7Moxlp/neUdjdoJqBeHj3zYF3DgXy/BJnAkB22OHjv29j3po9GJO8EjuK9rBiQXKuGyMn6R0rtH+9eTvqTOaoHLuiTOSPZstfERkrfdetL/SKQCHjivORNwZNAkEAiVCPlgZ1v9B817ieFl3XJruTcH62OpVyvS6P0rO5tZOLNc2xNtTDDNI2WYyy9sv1bx/F/VhzCUpMdZuCafSogw==";
+
+    // public static final String PRIVATE_KEY = "MIICXgIBAAKBgQDFyTMpZoEhwTVq/UDfF3vsorizl9BVyBw8SI06mWkujG8Fm8TAgZ0geBOqbTXfQiP09xchC8dxsVwRTNCV09wiK3glFmSVxOGglpuos2iyVqWfWXk8Q3OxcHCmro2OZYlv2zuLa6t2uu5pfhfzNKUAdw7ME4VRhM5s//pgchR+CwIDAQABAoGBAKvl7UhbJXov0Px2tW3vnC4TUtIL7O7RJ/Eg4VX/xVHGjitisYLaY7S3h+gEWOD8PAIIyppXAXWHv0vt5g+B/XxRXlN7MCreuoW4Vrr1T2Pt1a24Zv9vnbx95XJsefPEugJqow0BfX+ZlUsKjl8Xcfr1+vTO6hW29IADSnWSxxjZAkEA7m0Qu8oQhXjrx8wEPYLJKbyhTjEI8t3gFtS10Xq8XFNtVdzzIXrcBdI04prTGOYfBc8mZy1zo2OdiWwh3v4XBwJBANRdSKvv20f4HQ/e8wBFoNhVyrHKItOLRxxuSgi1Y3SpOq0l28D0J0aea7N/D0OTQW0fghrJPbz78hgHz6w0O90CQQCgt7JM89OZNT6yiordL9kMIlQVkiY3GGsi2LXLBFIOZkpQU8Usb1X7Moxlp/neUdjdoJqBeHj3zYF3DgXy/BJnAkB22OHjv29j3po9GJO8EjuK9rBiQXKuGyMn6R0rtH+9eTvqTOaoHLuiTOSPZstfERkrfdetL/SKQCHjivORNwZNAkEAiVCPlgZ1v9B817ieFl3XJruTcH62OpVyvS6P0rO5tZOLNc2xNtTDDNI2WYyy9sv1bx/F/VhzCUpMdZuCafSogw==";
+
+    public static final String public_key = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJhTpp7D3dUefLEbpyHJFugd+3" +
+            "Db8VZsvNNnDDcjyOXbB2OTpFVo9Z2+tcHHbQ57Mde9ITaAs2IGQYB4nMJ6HLJvOc" +
+            "/g1KNEdRa2AKDIBE1S5Lamg1hD+zmEQz26QDPVzGX2xWzkoPLC+UrLyWDMHytlk/" +
+            "b9DV8AdxTkzgYX/CNwIDAQAB";
+
+    public static final String private_key = "MIICWwIBAAKBgQCJhTpp7D3dUefLEbpyHJFugd+3Db8VZsvNNnDDcjyOXbB2OTpF" +
+            "Vo9Z2+tcHHbQ57Mde9ITaAs2IGQYB4nMJ6HLJvOc/g1KNEdRa2AKDIBE1S5Lamg1" +
+            "hD+zmEQz26QDPVzGX2xWzkoPLC+UrLyWDMHytlk/b9DV8AdxTkzgYX/CNwIDAQAB" +
+            "AoGANDc1+soMo2BaFqzgkjturPr7KtI5X7LsZzrojg1uGNBSFFGeYn1/aKssLolQ" +
+            "Q/n19JfzKBM1TpP17XnPRIk30Q/Pe8WVy6QyvZ1TItojPGtHVqeQFcwwl//5KvTr" +
+            "h5X8i+pvEqWlMzUOZKVu7AUMnvnI1b4hGKAcFyoQT2k/MsECQQDSE5VRBYLmzFNd" +
+            "qU2HIEuLc7Mw2rhSAzZejwHb0Pn1/LN777fPYmujtyOgbprXk07AX9t5LDb55vF9" +
+            "93VT8BZJAkEAp5U4zJO4YrCX6pAtGMwXlyLkcpnSAWgbcehwcekL+qsnmRinga8h" +
+            "OdsQGSXtLPIGXn/gah/hfXcME0Agwm8UfwJAeDH+N8o4eEcl16v7kLm4n4RGXUh3" +
+            "N21hGT8naBasPcMlCl9AwuZkAdrSBoPiEj/VShpOX4kdt2Qcfd8tASaYCQJAfLij" +
+            "ICZkmRaCybDpz0W93N68FMqEMEXR/zGV1kEyiCmve9KMgAjd+pgd4AmI/eVWdihH" +
+            "1dPKVz0tgHo+p1ZScwJAUxBp9tcbT2cCjD6vproxdyhjBu6q5pnq5dUWoFiSpExP" +
+            "atuMQ80IBlveTFvKQm2HNzm5RcEwoH81UxgHc/Fhmg==";
+
 
     /**
      * 使用公钥加密
@@ -39,6 +63,8 @@ public class RSAUtil {
         return cp.doFinal(data.getBytes());
     }
 
+
+
     /**
      * 使用私钥解密
      */
@@ -53,6 +79,15 @@ public class RSAUtil {
         cp.init(Cipher.DECRYPT_MODE, keyPrivate);
         return cp.doFinal(encrypted);
     }
+
+
+
+
+
+
+
+
+
 
     public static String bytes2HexString(byte[] b) {
         String ret = "";

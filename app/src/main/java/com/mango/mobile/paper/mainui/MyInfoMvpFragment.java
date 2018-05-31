@@ -2,6 +2,7 @@ package com.mango.mobile.paper.mainui;
 
 
 import android.content.Intent;
+import android.util.Base64;
 
 import com.mango.db.DbManager;
 import com.mango.entity.User;
@@ -45,11 +46,19 @@ public class MyInfoMvpFragment extends BaseMvpFragment {
     protected void init() {
 
         try {
-            byte[] s = RSAUtil.encryptByPublicKey("我是加密数据", RSAUtil.PUBLIC_KEY);
-            String str = RSAUtil.bytes2HexString(s);// 16进制字符串
-            Helper.showToast(str);
-        }catch (Exception e){
 
+            byte[] data = RSAUtil.mi.getBytes();
+            byte[] key_pub = RSAUtil.public_key.getBytes();
+            byte[] key_pri = RSAUtil.private_key.getBytes();
+            byte[] s = RSAUtil.encryptByPublicKey(RSAUtil.mi,  RSAUtil.public_key);
+            String base64 = Base64.encodeToString( RSAUtil.encryptByPublicKey(RSAUtil.mi,  RSAUtil.public_key), Base64.DEFAULT);
+            //   String str = RSAUtil.bytes2HexString(s);// 16进制字符串
+           // String ak = base64.toString();
+            Helper.showToast(base64);
+            byte[]  a = RSAUtil.decryptByPrivateKey(s, RSAUtil.private_key);
+            Helper.showToast(new String(a));
+        } catch (Exception e) {
+            e.getMessage();
         }
         //ButterKnife.bind(this, getActivity());
 //
@@ -62,7 +71,6 @@ public class MyInfoMvpFragment extends BaseMvpFragment {
 
 
     }
-
 
 
     /**

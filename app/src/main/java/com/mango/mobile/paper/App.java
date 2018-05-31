@@ -19,6 +19,7 @@ import com.umeng.message.UmengMessageHandler;
 import com.umeng.message.UmengNotificationClickHandler;
 import com.umeng.message.entity.UMessage;
 import com.umeng.socialize.PlatformConfig;
+import com.wonderkiln.blurkit.BlurKit;
 
 
 /**
@@ -47,6 +48,9 @@ public class App extends BaseApplication {
 
         initUShare();
         initUPush();
+
+        //初始化模糊
+        BlurKit.init(this);
     }
 
     private void initUShare() {

@@ -1,0 +1,48 @@
+# 白芷开发文档（Android）
+
+### 数据库
+
+日记表（record）
+
+字段 | 类型 | 字段意义
+----|------|----
+record_id|string| 一条记录的唯一标识
+create_time|long| 记录创建时间
+record_type |int| 记录的类型（0：文字 1：图片 2：视频 3：音频）
+record_title|string| 记录的标题
+record_content| String| 记录的主要内容
+record_audio|string| 记录的音频地址
+record_vedio| String| 记录的视频地址
+record_show_root|int| 记录的显示权限
+record_ platform|string| 记录的平台来源（Android or ios）
+is_delete|int|是否删除（0：未删除 1：删除）
+
+用户类型表（record_type）
+
+字段 | 类型 | 字段意义
+----|------|----
+record_type_id| string  | 记录类型唯一标识
+record_type_name|string  | 记录类型名称（0：文字 1：图片 2：视频 3：音频 4：专业日志）
+
+
+用户表（user）
+
+字段 | 类型 | 字段意义
+----|------|----
+user_id| string  | 用户的唯一标识
+user_name|string  | 用户名（账号，手机号）
+user_nick | string | 用户昵称
+user_head | string | 用户头像
+user_sex| string  | 用户性别
+user_signature| String| 用户签名
+user_address| string  | 用户地址
+user_email| String| 用户邮箱
+user_level| String| 用户邮箱
+
+
+用户类型表（account）
+
+字段 | 类型 | 字段意义
+----|------|----
+account_id| string  | 用户类型唯一标识
+account_name|string  | 用户类型名称（爸爸 妈妈 我）

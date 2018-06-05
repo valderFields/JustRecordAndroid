@@ -1,7 +1,7 @@
 package com.mango.mobile.paper.mainui;
 
+import android.app.Dialog;
 import android.app.Fragment;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,11 +13,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.mango.mobile.paper.modules.TimeLinePager.AddRecordActivity;
+import com.mango.mobile.paper.modules.TimeLinePager.addRecord.AddRecordDialog;
 import com.mango.viewBySelf.TextViewCustomTF;
 import com.mango.mobile.paper.R;
 import com.umeng.message.PushAgent;
-import com.wonderkiln.blurkit.BlurKit;
 
 import java.io.ByteArrayOutputStream;
 
@@ -153,9 +152,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addRecord() {
-        Intent intent = new Intent(this, AddRecordActivity.class);
-        intent.putExtra("bitmap", bitmapByte);
-        startActivity(intent);
+        Dialog dialog = new AddRecordDialog(this);
+        dialog.show();
         Log.d("zhou",System.currentTimeMillis()+"");
     }
 

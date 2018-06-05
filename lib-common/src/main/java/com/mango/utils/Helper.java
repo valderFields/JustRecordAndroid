@@ -1,10 +1,14 @@
 package com.mango.utils;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
@@ -13,6 +17,7 @@ import com.mango.utils.chacheUtil.CacheUtility;
 import com.orhanobut.logger.Logger;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
@@ -206,5 +211,8 @@ public class Helper {
             imm.hideSoftInputFromWindow(v.getApplicationWindowToken(), 0);
         }
     }
+
+
+
 
 }

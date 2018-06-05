@@ -53,20 +53,18 @@
         <activity android:name=".modules.mainPager.message.MessageActivity" />
         <activity android:name=".modules.mainPager.ProjectDetailsActivity" />
         <activity android:name=".modules.projectPager.SearchActivity" />
-        <activity android:name=".modules.TimeLinePager.AddRecordActivity"
-           ></activity>
         //友盟
         <activity
             android:name="com.umeng.socialize.media.WBShareCallBackActivity"
             android:configChanges="keyboardHidden|orientation"
             android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         //微博
         <activity
             android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
             android:configChanges="keyboardHidden|orientation"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
             android:launchMode="singleTask"
@@ -101,7 +99,7 @@
             android:name="com.tencent.connect.common.AssistActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
+        <activity android:name=".modules.TimeLinePager.addRecord.AddWordActivity"></activity>
     </application>
 
 </manifest>

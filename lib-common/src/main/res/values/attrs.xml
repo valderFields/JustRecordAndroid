@@ -12,4 +12,14 @@
         <attr name="right_icon" format="color|reference"></attr>
         <attr name="right_img" format="color|reference"></attr>
     </declare-styleable>
+
+    <declare-styleable name="TopBar">
+        <attr name="left_text_topbar" format="string|reference"></attr>
+        <attr name="right_text_topbar" format="string|reference"></attr>
+        <attr name="type">
+            <enum name="type_1" value="1" />
+            <enum name="type_2" value="2" />
+            <enum name="type_3" value="3" />
+        </attr>
+    </declare-styleable>
 </resources>

@@ -14,11 +14,19 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextWatcher;
 import android.text.style.ImageSpan;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.Scroller;
 
 import com.mango.base.BaseMvpActivity;
 import com.mango.mobile.paper.R;
+import com.mango.mobile.paper.common.utils.SoftKeyBoardListener;
 import com.mango.mobile.paper.modules.myinfo.MyInfoActivity;
 import com.mango.utils.GalleryUtil;
 import com.mango.utils.Helper;
@@ -39,6 +47,10 @@ public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordMo
     MoreResourceEditText etTitle;
     @BindView(R.id.btn_add)
     Button btnAdd;
+    @BindView(R.id.sv_record)
+    ScrollView svRecord;
+    @BindView(R.id.ll_record)
+    RelativeLayout llRecord;
 
     @Override
     protected int getLayoutResID() {
@@ -52,19 +64,21 @@ public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordMo
         etTitle.setEnabled(true);
         //etTitle.setFocusable(true);//可以通过键盘得到焦点
         etTitle.setFocusableInTouchMode(true);//可以通过触摸得到焦点
-//        SpannableString span = new SpannableString(etTitle.getContentList().toString());
-//        ClickSpan clickSpan = new ClickSpan(path);
-//        span.setSpan(clickSpan, "",
-//                txt.indexOf(to) + to.length(),
-//                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-//        etTitle.setText(span);
+
+        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) svRecord.getLayoutParams();
+        layoutParams.height =Helper.getDisplayHeight(this);
+        svRecord.setLayoutParams(layoutParams);
+        FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) llRecord.getLayoutParams();
+        layoutParams1.height = Helper.getDisplayHeight(this) - Helper.dip2px(110) - Helper.getStatusBarHeight();
+       // layoutParams1.gravity = Gravity.BOTTOM;
+        llRecord.setLayoutParams(layoutParams1);
+        initEvent();
+
+    }
 
 
-        etTitle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
+    private void initEvent(){
+
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,8 +101,35 @@ public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordMo
 
 
 
-    }
+        SoftKeyBoardListener.setListener(this, new SoftKeyBoardListener.OnSoftKeyBoardChangeListener() {
+            @Override
+            public void keyBoardShow(int height) {
+                Helper.showToast(height + "");
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) svRecord.getLayoutParams();
+                layoutParams.height = height + Helper.dip2px(50);
+                svRecord.setLayoutParams(layoutParams);
 
+                FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) llRecord.getLayoutParams();
+                layoutParams1.height = height;
+                llRecord.setLayoutParams(layoutParams1);
+
+
+                //TODO  scrollview 与 editText 的滑动事件冲突
+            }
+
+            @Override
+            public void keyBoardHide(int height) {
+                Helper.showToast(height + "隐藏");
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) svRecord.getLayoutParams();
+                layoutParams.height =Helper.getDisplayHeight(AddWordActivity.this);
+                svRecord.setLayoutParams(layoutParams);
+                FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) llRecord.getLayoutParams();
+                layoutParams1.height = Helper.getDisplayHeight(AddWordActivity.this) - Helper.dip2px(110) - Helper.getStatusBarHeight();
+                llRecord.setLayoutParams(layoutParams1);
+            }
+        });
+
+    }
 
     @Override
     public void upDate() {
@@ -119,7 +160,7 @@ public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordMo
         switch (requestCode) {
             case 500:  //相册
                 String path = GalleryUtil.getPath(this, data.getData());
-               etTitle.insertBitmap(path);
+                etTitle.insertBitmap(path);
                 break;
         }
     }

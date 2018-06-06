@@ -6,7 +6,9 @@ import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.inputmethod.InputMethodManager;
@@ -184,24 +186,25 @@ public class Helper {
         boolean isDigit = false;//定义一个boolean值，用来表示是否包含数字
         boolean isLetter = false;//定义一个boolean值，用来表示是否包含字母
         if (password.length() >= 6 && password.length() <= 16) {
-            for(int i=0 ; i<password.length();i++){
-                if(Character.isDigit(password.charAt(i))){   //用char包装类中的判断数字的方法判断每一个字符
+            for (int i = 0; i < password.length(); i++) {
+                if (Character.isDigit(password.charAt(i))) {   //用char包装类中的判断数字的方法判断每一个字符
                     isDigit = true;
                 }
-                if(Character.isLetter(password.charAt(i))){  //用char包装类中的判断字母的方法判断每一个字符
+                if (Character.isLetter(password.charAt(i))) {  //用char包装类中的判断字母的方法判断每一个字符
                     isLetter = true;
                 }
             }
 
         }
         String regex = "^[a-zA-Z0-9]+$";
-        boolean isRight = isDigit && isLetter&&password.matches(regex);
+        boolean isRight = isDigit && isLetter && password.matches(regex);
         return isRight;
 
     }
 
     /**
      * 隐藏软键盘
+     *
      * @param v
      */
     public static void HideKeyboard(View v) {
@@ -212,7 +215,45 @@ public class Helper {
         }
     }
 
+    /**
+     * 获取屏幕宽度
+     *
+     * @param act
+     * @return
+     */
+    public static int getDisplayWidth(AppCompatActivity act) {
+        if (act == null) return 800;
+        DisplayMetrics dm = new DisplayMetrics();
+        act.getWindowManager().getDefaultDisplay().getMetrics(dm);
+        return dm.widthPixels;
+    }
 
+    /**
+     * 获取屏幕高度
+     *
+     * @param act
+     * @return
+     */
+    public static int getDisplayHeight(AppCompatActivity act) {
+        if (act == null) return 600;
+        DisplayMetrics dm = new DisplayMetrics();
+        act.getWindowManager().getDefaultDisplay().getMetrics(dm);
+        return dm.heightPixels;
+    }
+
+    /**
+     * 获取状态栏高度
+     * */
+    public static int getStatusBarHeight() {
+        int statusBarHeight1 = -1;
+        //获取status_bar_height资源的ID
+        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            //根据资源ID获取响应的尺寸值
+            statusBarHeight1 = context.getResources().getDimensionPixelSize(resourceId);
+        }
+        return statusBarHeight1;
+    }
 
 
 }

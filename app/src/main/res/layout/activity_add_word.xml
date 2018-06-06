@@ -14,17 +14,19 @@
         topbar:right_text_topbar="完成"
         topbar:type="type_2"/>
     <ScrollView
+        android:id="@+id/sv_record"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
         android:layout_below="@+id/topbar">
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/ll_record"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
             <com.mango.viewBySelf.MoreResourceEditText
                 android:id="@+id/et_title"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -35,8 +37,9 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
                 android:background="@color/colorPrimaryDark"/>
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.Editable;
+import android.text.Layout;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
@@ -27,6 +28,12 @@ public class MoreResourceEditText extends EditTextCustomTF {
     private Context context;
     private List<String> mContentList;
     float oldY = 0;
+
+    public Layout mLayout;
+    public int paddingTop;
+    public int paddingBottom;
+    public int mHeight;
+    public int mLayoutHeight;
 
     public static final String mBitmapTag = "☆";
     private String mNewLineTag = "\n";
@@ -180,7 +187,7 @@ public class MoreResourceEditText extends EditTextCustomTF {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-
+       // getParent().requestDisallowInterceptTouchEvent(true);
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 oldY = event.getY();
@@ -201,6 +208,28 @@ public class MoreResourceEditText extends EditTextCustomTF {
             default:
                 break;
         }
-        return super.onTouchEvent(event);
+        return  super.onTouchEvent(event);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+        mLayout = getLayout();
+        mLayoutHeight = mLayout.getHeight();
+        paddingTop = getTotalPaddingTop();
+        paddingBottom = getTotalPaddingBottom();
+        mHeight = getHeight();
+    }
+
+    @Override
+    protected void onScrollChanged(int horiz, int vert, int oldHoriz, int oldVert) {
+        super.onScrollChanged(horiz, vert, oldHoriz, oldVert);
+        //这里是滑动到底部的示例，滑动到顶部只用计算vert的值是否为0就可以
+        //这里可以提前计算好一个值，不用每次进行计算，这里只是做示例
+        if (vert == mLayoutHeight + paddingTop + paddingBottom - mHeight) {
+            //这里触发父布局或祖父布局的滑动事件，下面这行代码只是示例作用，并没有实现真正的效果
+            getParent().requestDisallowInterceptTouchEvent(false);
+        }
     }
 }

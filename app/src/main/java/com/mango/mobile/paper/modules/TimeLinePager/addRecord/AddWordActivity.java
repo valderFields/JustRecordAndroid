@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.text.Editable;
 import android.text.Spannable;
@@ -15,9 +16,12 @@ import android.text.SpannableString;
 import android.text.TextWatcher;
 import android.text.style.ImageSpan;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -33,6 +37,7 @@ import com.mango.utils.Helper;
 import com.mango.utils.PermissionUtility;
 import com.mango.viewBySelf.EditTextCustomTF;
 import com.mango.viewBySelf.MoreResourceEditText;
+import com.mango.viewBySelf.ScrollEditText;
 import com.mango.viewBySelf.style.ClickSpan;
 
 import java.io.FileNotFoundException;
@@ -44,13 +49,15 @@ import io.reactivex.functions.Consumer;
 public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordModel> implements AddWordContract.View {
 
     @BindView(R.id.et_title)
-    MoreResourceEditText etTitle;
+    EditTextCustomTF etTitle;
+    @BindView(R.id.et_content)
+    MoreResourceEditText etContent;
     @BindView(R.id.btn_add)
     Button btnAdd;
-    @BindView(R.id.sv_record)
-    ScrollView svRecord;
-    @BindView(R.id.ll_record)
-    RelativeLayout llRecord;
+    @BindView(R.id.scrollview)
+    ScrollView scrollView;
+
+    private int editTextHeight;
 
     @Override
     protected int getLayoutResID() {
@@ -59,26 +66,19 @@ public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordMo
 
     @Override
     protected void initView() {
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
         ButterKnife.bind(this);
 
-        etTitle.setEnabled(true);
+        etContent.setEnabled(true);
         //etTitle.setFocusable(true);//可以通过键盘得到焦点
-        etTitle.setFocusableInTouchMode(true);//可以通过触摸得到焦点
+        etContent.setFocusableInTouchMode(true);//可以通过触摸得到焦点
 
-        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) svRecord.getLayoutParams();
-        layoutParams.height =Helper.getDisplayHeight(this);
-        svRecord.setLayoutParams(layoutParams);
-        FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) llRecord.getLayoutParams();
-        layoutParams1.height = Helper.getDisplayHeight(this) - Helper.dip2px(110) - Helper.getStatusBarHeight();
-       // layoutParams1.gravity = Gravity.BOTTOM;
-        llRecord.setLayoutParams(layoutParams1);
         initEvent();
 
     }
 
 
-    private void initEvent(){
-
+    private void initEvent() {
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,35 +100,62 @@ public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordMo
         });
 
 
-
         SoftKeyBoardListener.setListener(this, new SoftKeyBoardListener.OnSoftKeyBoardChangeListener() {
             @Override
             public void keyBoardShow(int height) {
+                editTextHeight = height;
+                RelativeLayout.LayoutParams layoutParams1 = (RelativeLayout.LayoutParams) scrollView.getLayoutParams();
+                layoutParams1.height = height + Helper.dip2px(50);
+                scrollView.setLayoutParams(layoutParams1);
                 Helper.showToast(height + "");
-                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) svRecord.getLayoutParams();
-                layoutParams.height = height + Helper.dip2px(50);
-                svRecord.setLayoutParams(layoutParams);
 
-                FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) llRecord.getLayoutParams();
-                layoutParams1.height = height;
-                llRecord.setLayoutParams(layoutParams1);
-
-
-                //TODO  scrollview 与 editText 的滑动事件冲突
             }
 
             @Override
             public void keyBoardHide(int height) {
-                Helper.showToast(height + "隐藏");
-                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) svRecord.getLayoutParams();
-                layoutParams.height =Helper.getDisplayHeight(AddWordActivity.this);
-                svRecord.setLayoutParams(layoutParams);
-                FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) llRecord.getLayoutParams();
-                layoutParams1.height = Helper.getDisplayHeight(AddWordActivity.this) - Helper.dip2px(110) - Helper.getStatusBarHeight();
-                llRecord.setLayoutParams(layoutParams1);
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) scrollView.getLayoutParams();
+                layoutParams.height = Helper.getDisplayHeight(AddWordActivity.this);
+                scrollView.setLayoutParams(layoutParams);
+
             }
         });
 
+
+        etContent.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                //触摸的是EditText并且当前EditText可以滚动则将事件交给EditText处理；否则将事件交由其父类处理
+                if ((view.getId() == R.id.et_title && canVerticalScroll(etContent))) {
+                    view.getParent().requestDisallowInterceptTouchEvent(true);//告诉父view，我的事件自己处理
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        view.getParent().requestDisallowInterceptTouchEvent(false);//告诉父view，你可以处理了
+                    }
+                }
+                return false;
+            }
+        });
+
+    }
+
+
+    /**
+     * EditText竖直方向是否可以滚动
+     *
+     * @param editText 需要判断的EditText
+     * @return true：可以滚动   false：不可以滚动
+     */
+    private boolean canVerticalScroll(EditText editText) {
+        //滚动的距离
+        int scrollY = editText.getScrollY();
+        //控件内容的总高度
+        int scrollRange = editText.getLayout().getHeight();
+        //控件内容总高度与实际显示高度的差值
+        int scrollDifference = scrollRange - editTextHeight;
+
+        if (scrollDifference == 0) {
+            return false;
+        }
+        return (scrollY > 0) || (scrollY < scrollDifference - 1);
     }
 
     @Override
@@ -160,8 +187,11 @@ public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordMo
         switch (requestCode) {
             case 500:  //相册
                 String path = GalleryUtil.getPath(this, data.getData());
-                etTitle.insertBitmap(path);
+                etContent.insertBitmap(path);
                 break;
         }
     }
 }
+
+
+

@@ -27,13 +27,19 @@ public class MoreResourceEditText extends EditTextCustomTF {
     private final String TAG = "PATEditorView";
     private Context context;
     private List<String> mContentList;
-    float oldY = 0;
 
-    public Layout mLayout;
     public int paddingTop;
     public int paddingBottom;
     public int mHeight;
     public int mLayoutHeight;
+    private final int MOVE_SLOP = 20; //移动距离临界
+    //滑动距离的最大边界
+    private int mOffsetHeight;
+
+    //是否到顶或者到底的标志
+    private boolean mBottomFlag = false;
+    private boolean isCanScroll = false;//标记内容是否触发了滚动
+    private float lastY = 0;
 
     public static final String mBitmapTag = "☆";
     private String mNewLineTag = "\n";
@@ -187,49 +193,50 @@ public class MoreResourceEditText extends EditTextCustomTF {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-       // getParent().requestDisallowInterceptTouchEvent(true);
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                oldY = event.getY();
-                //requestFocus();
-                break;
-            case MotionEvent.ACTION_MOVE:
-                float newY = event.getY();
-                if (Math.abs(oldY - newY) > 3) {
-                    clearFocus();
+        boolean result = super.onTouchEvent(event);
+        //如果是需要拦截，则再拦截，这个方法会在onScrollChanged方法之后再调用一次
+        if (!mBottomFlag)
+            getParent().requestDisallowInterceptTouchEvent(true);
+        if (event.getAction() == MotionEvent.ACTION_MOVE){
+            if (lastY == 0){
+                lastY = event.getRawY();
+            }
+            //条件：手指move了一段距离，但是onScrollChanged函数未调用，说明文字无法滚动了，则将触摸处理权交还给ParentView
+            if (Math.abs(lastY - event.getRawY()) > MOVE_SLOP){
+                if (!isCanScroll){
+                    getParent().requestDisallowInterceptTouchEvent(false);
                 }
-                break;
-            case MotionEvent.ACTION_UP:
-                 newY = event.getY();
-                if (Math.abs(oldY - newY) > 20) {
-                    clearFocus();
-                }
-                break;
-            default:
-                break;
+            }
         }
-        return  super.onTouchEvent(event);
+        return result;
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
-        mLayout = getLayout();
+        //获得内容面板
+        Layout mLayout = getLayout();
         mLayoutHeight = mLayout.getHeight();
+
         paddingTop = getTotalPaddingTop();
         paddingBottom = getTotalPaddingBottom();
+
+        //获得控件的实际高度
         mHeight = getHeight();
+
+        //计算滑动距离的边界(H_content - H_view = H_scroll)
+        mOffsetHeight = mLayoutHeight + paddingTop + paddingBottom - mHeight;
     }
+
 
     @Override
     protected void onScrollChanged(int horiz, int vert, int oldHoriz, int oldVert) {
         super.onScrollChanged(horiz, vert, oldHoriz, oldVert);
-        //这里是滑动到底部的示例，滑动到顶部只用计算vert的值是否为0就可以
-        //这里可以提前计算好一个值，不用每次进行计算，这里只是做示例
-        if (vert == mLayoutHeight + paddingTop + paddingBottom - mHeight) {
-            //这里触发父布局或祖父布局的滑动事件，下面这行代码只是示例作用，并没有实现真正的效果
+        isCanScroll = true;
+        if (vert == mOffsetHeight || vert == 0) {
+            //这里将处理权交还给父控件
             getParent().requestDisallowInterceptTouchEvent(false);
+            mBottomFlag = true;
         }
     }
 }

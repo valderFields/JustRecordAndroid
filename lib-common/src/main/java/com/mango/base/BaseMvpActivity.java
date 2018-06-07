@@ -22,9 +22,6 @@ public abstract class BaseMvpActivity<T extends BasePresenter, E extends BaseMod
     }
 
     protected void init() {
-
-
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(getLayoutResID());
         mPresenter = TUtil.getT(this, 0);
         mModel = TUtil.getT(this, 1);

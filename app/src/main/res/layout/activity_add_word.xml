@@ -12,42 +12,54 @@
         android:layout_height="wrap_content"
         topbar:left_text_topbar="取消"
         topbar:right_text_topbar="完成"
-        topbar:type="type_2"/>
+        topbar:type="type_2" />
+
     <ScrollView
-        android:id="@+id/sv_record"
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:layout_below="@+id/topbar">
-        <RelativeLayout
-            android:id="@+id/ll_record"
+        android:layout_below="@+id/topbar"
+        android:fastScrollEnabled="true">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.mango.viewBySelf.MoreResourceEditText
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.mango.viewBySelf.EditTextCustomTF
                 android:id="@+id/et_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:hint="标题"
+                android:paddingBottom="5dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:hint="标题"
-                android:textSize="18dp"/>
-            <View
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+            <com.mango.viewBySelf.MoreResourceEditText
+                android:id="@+id/et_content"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_alignParentBottom="true"
-                android:background="@color/colorPrimaryDark"/>
-        </RelativeLayout>
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:hint="内容"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:textSize="18dp" />
+        </LinearLayout>
+
     </ScrollView>
 
 
     <Button
         android:id="@+id/btn_add"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="添加"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="添加" />
 </RelativeLayout>

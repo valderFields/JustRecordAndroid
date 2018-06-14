@@ -54,6 +54,8 @@ public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordMo
     MoreResourceEditText etContent;
     @BindView(R.id.btn_add)
     Button btnAdd;
+    @BindView(R.id.btn_look)
+    Button btnLook;
     @BindView(R.id.scrollview)
     ScrollView scrollView;
 
@@ -96,6 +98,13 @@ public class AddWordActivity extends BaseMvpActivity<AddWordPresenter, AddWordMo
                                 }
                             }
                         });
+            }
+        });
+
+        btnLook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Helper.showToast(etContent.getText().toString());
             }
         });
 
